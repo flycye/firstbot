@@ -15,7 +15,7 @@ client.on("message", async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
 
-    if(cmd === `${prefix}hi`){
+    if(message.content === 'hi'){
         return message.channel.send("yooooo wsp")
     }
 
@@ -58,7 +58,7 @@ client.on("message", async message => {
         message.channel.send('pong');
       }
 
-      if (message.content === 'avatar') {
+      if (message.content === 'icon') {
         // Send the user's avatar URL
         return message.reply(message.author.displayAvatarURL());
       }
